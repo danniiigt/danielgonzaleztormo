@@ -1,12 +1,19 @@
+import { AcercaDeMi } from "@/components/AcercaDeMi";
+import { Contacto } from "@/components/Contacto";
+import { Estudios } from "@/components/Estudios";
 import { Navbar } from "@/components/Navbar";
-import React from "react";
+import { Portfolio } from "@/components/Portfolio";
+import { Presentacion } from "@/components/Presentacion";
 
 const Home = () => {
   return (
     <>
       <Navbar />
-
-      <h1>Home</h1>
+      <Presentacion />
+      <AcercaDeMi />
+      <Portfolio />
+      <Estudios />
+      <Contacto />
     </>
   );
 };
