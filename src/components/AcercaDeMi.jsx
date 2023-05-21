@@ -11,10 +11,10 @@ export const AcercaDeMi = () => {
   }, []);
 
   return (
-    <div className="bg-white py-24 px-16">
+    <div id="acerca-de-mi" className="bg-white py-12 lg:py-24 px-6 lg:px-16">
       <div
         data-aos="fade-right"
-        className="max-w-[1000px] mx-auto grid grid-cols-2 gap-8"
+        className="max-w-[1000px] mx-auto grid lg:grid-cols-2 grid-cols-1 gap-8"
       >
         <div>
           <Image

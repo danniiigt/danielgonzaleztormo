@@ -2,7 +2,7 @@ import React from "react";
 
 export const Navbar = () => {
   return (
-    <div className="w-full  px-16 shadow-md">
+    <div className="w-full px-6 lg:px-16 shadow-md">
       <div className="max-w-[1000px] h-[80px] mx-auto flex justify-between items-center">
         <div>
           <h1 className="text-xl font-extrabold">DanielGT</h1>
@@ -27,10 +27,18 @@ export const Navbar = () => {
             </li>
             <li>
               <a
-                href="#proyectos"
+                href="#portfolio"
                 className="hover:text-emerald-700 hover:font-extrabold transition-all duration-200"
               >
-                Proyectos
+                Portfolio
+              </a>
+            </li>
+            <li>
+              <a
+                href="#estudios"
+                className="hover:text-emerald-700 hover:font-extrabold transition-all duration-200"
+              >
+                Estudios
               </a>
             </li>
             <li>

@@ -11,7 +11,7 @@ export const Contacto = () => {
   }, []);
 
   return (
-    <div className="bg-gray-50 py-24 px-16">
+    <div id="contacto" className="bg-gray-50 py-12 lg:py-24 px-6 lg:px-16">
       <div data-aos={"fade-left"} className="max-w-[1000px] mx-auto">
         <div>
           <h1 className="text-emerald-600 font-extrabold text-lg uppercase">
@@ -22,7 +22,7 @@ export const Contacto = () => {
           </h1>
         </div>
 
-        <div className="flex gap-24 justify-between items-center mt-12">
+        <div className="flex lg:gap-24 gap-8 justify-between lg:items-center mt-12 lg:flex-row flex-col">
           <div className="flex gap-4 items-center">
             <div className="p-4 bg-white rounded-full shadow-md shadow-gray-300">
               <svg

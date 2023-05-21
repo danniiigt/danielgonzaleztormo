@@ -2,7 +2,7 @@ import React from "react";
 
 export const Estudios = () => {
   return (
-    <div className="bg-white py-24 px-16">
+    <div id="estudios" className="bg-white py-12 lg:py-24 px-6 lg:px-16">
       <div data-aos="fade-right" className="max-w-[1000px] mx-auto ">
         <div>
           <h1 className="text-emerald-600 font-extrabold text-lg uppercase">
@@ -12,8 +12,8 @@ export const Estudios = () => {
             Estos son mis estudios más recientes🎓
           </h1>
         </div>
-        <div className="mt-12 flex justify-between gap-8 w-full">
-          <div className="w-1/2 p-4 rounded-lg shadow">
+        <div className="mt-12 flex-col lg:flex-row flex justify-between gap-8 w-full">
+          <div className="w-full p-4 rounded-lg shadow">
             <h1 className="text-2xl font-extrabold">UCAM FP</h1>
             <div className="mt-4 flex flex-col gap-1">
               <div className="flex gap-2 items-center">
@@ -74,7 +74,7 @@ export const Estudios = () => {
               </div>
             </div>
           </div>
-          <div className="w-1/2 p-4 rounded-lg shadow">
+          <div className="w-full p-4 rounded-lg shadow">
             <h1 className="text-2xl font-extrabold">UDEMY y YOUTUBE</h1>
             <div className="mt-4 flex flex-col gap-1">
               <div className="flex gap-2">

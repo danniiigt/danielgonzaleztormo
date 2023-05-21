@@ -20,10 +20,10 @@ export const PortfolioItem = ({
     return (
       <div
         data-aos={"fade-right"}
-        className="bg-white rounded-lg shadow-md p-8 flex gap-4 "
+        className="bg-white rounded-lg shadow-md p-8 flex lg:flex-row flex-col gap-4"
       >
-        <div className="w-[40%]">{children}</div>
-        <div className="w-[60%]">
+        <div className="lg:w-[40%] w-full lg:order-1 order-2">{children}</div>
+        <div className="lg:w-[60%] w-full lg:order-2 order-1">
           <Link
             href={imageRedirectUrl ? imageRedirectUrl : "#"}
             target="_blank"
@@ -44,9 +44,9 @@ export const PortfolioItem = ({
   return (
     <div
       data-aos={"fade-left"}
-      className="bg-white rounded-lg shadow-md p-8 flex gap-4 "
+      className="bg-white rounded-lg shadow-md p-8 flex lg:flex-row flex-col gap-4"
     >
-      <div className="w-[60%]">
+      <div className="lg:w-[60%] w-full">
         <Link
           href={imageRedirectUrl ? imageRedirectUrl : "#"}
           target="_blank"
@@ -61,7 +61,7 @@ export const PortfolioItem = ({
           />
         </Link>
       </div>
-      <div className="w-[40%]">{children}</div>
+      <div className="lg:w-[40%] w-full">{children}</div>
     </div>
   );
 };

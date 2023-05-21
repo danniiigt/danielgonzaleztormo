@@ -7,7 +7,7 @@ import { TechChip } from "./TechChip";
 
 export const Portfolio = () => {
   return (
-    <div className="bg-gray-100 py-24 px-16">
+    <div id="portfolio" className="bg-gray-100 py-12 lg:py-24 px-6 lg:px-16">
       <div className="max-w-[1000px] mx-auto">
         <div>
           <h1 className="text-emerald-600 font-extrabold text-lg uppercase">
@@ -18,12 +18,12 @@ export const Portfolio = () => {
           </h1>
         </div>
 
-        <div className="flex flex-col gap-16 my-12">
+        <div className="flex flex-col gap-8 lg:gap-16 mt-12">
           <PortfolioItem
             imageRedirectUrl="https://padel-app-two.vercel.app/"
             imageUrl="https://camo.githubusercontent.com/77208d4f99c243e0449337850e60d380afcf3a1b41b6e04b716464b0ad0529c7/68747470733a2f2f692e696d6775722e636f6d2f516c4335684c4e2e706e67"
           >
-            <div className="flex flex-col gap-4 px-4">
+            <div className="flex flex-col gap-4 lg:px-4">
               <h1 className="text-xl font-extrabold underline decoration-emerald-700">
                 Padel App
               </h1>
@@ -75,7 +75,7 @@ export const Portfolio = () => {
             imageRedirectUrl="https://coches-de-ocasion.vercel.app/"
             imageUrl="https://i.imgur.com/wj3VpNs.png"
           >
-            <div className="flex flex-col gap-4 px-4">
+            <div className="flex flex-col gap-4 lg:px-4">
               <h1 className="text-xl font-extrabold underline decoration-emerald-700">
                 Coches de ocasión
               </h1>

@@ -5,15 +5,18 @@ import Link from "next/link";
 
 export const Presentacion = () => {
   return (
-    <div className="bg-gray-100 px-16 mt-1 h-[calc(100vh-90px)] flex items-center justify-center">
+    <div
+      id="inicio"
+      className="bg-gray-100 px-6 lg:px-16 py-16 mt-1 min-h-[calc(100vh-90px)] flex items-center justify-center"
+    >
       <div>
         <div
           data-aos="fade-down"
-          className="max-w-[1000px] mx-auto flex justify-between items-center"
+          className="max-w-[1000px] mx-auto flex justify-between flex-col lg:flex-row items-center"
         >
-          <div className="w-1/2 flex flex-col gap-4">
+          <div className="lg:w-1/2 mt-16 w-full flex flex-col gap-4 order-2 lg:order-1">
             <div className="relative">
-              <h1 className="text-6xl leading-[1.2] font-extrabold text-gray-700">
+              <h1 className="text-6xl text-center lg:text-left leading-[1.2] font-extrabold text-gray-700">
                 Front-End React Developer
               </h1>
               <Image
@@ -21,16 +24,16 @@ export const Presentacion = () => {
                 width={65}
                 height={65}
                 alt="saludo"
-                className="absolute right-20 bottom-[5px]"
+                className="absolute right-20 bottom-[5px] hidden lg:block"
               />
             </div>
             <div>
-              <p>
+              <p className="text-center lg:text-left">
                 ¡Hola! Soy Daniel, un apasionado desarrollador web especializado
                 en React. Actualmente viviendo en Murcia, España 📍
               </p>
             </div>
-            <div className="flex gap-4 mt-4">
+            <div className="flex justify-center lg:justify-normal gap-4 mt-4">
               <Link
                 href="https://www.linkedin.com/in/danielgonzaleztormo/"
                 target="_blank"
@@ -48,19 +51,22 @@ export const Presentacion = () => {
               </Link>
             </div>
           </div>
-          <div className="w-fit">
+          <div className="w-fit flex-1 order-1 lg:order-2">
             <Image
               width={325}
               height={325}
               src="/images/yo.jpg"
               alt="imagen"
-              className="h-[325px] w-[325px] object-top rounded-full object-cover"
+              className="h-[325px] w-[325px] ml-auto object-[0 -30px 0] rounded-full object-cover"
             />
           </div>
         </div>
-        <div data-aos="fade-down" className="flex gap-12 mt-16 items-center">
-          <h1>Stack Tecnológico</h1>
-          <div className="flex gap-4">
+        <div
+          data-aos="fade-down"
+          className="flex justify-center lg:justify-normal gap-12 mt-16 items-center"
+        >
+          <h1 className="hidden lg:block">Stack Tecnológico</h1>
+          <div className="flex gap-4 flex-wrap justify-center lg:justify-normal">
             <div className="bg-white shadow rounded-full p-4">
               <Image src="/icons/html.svg" alt="html" width={25} height={25} />
             </div>
