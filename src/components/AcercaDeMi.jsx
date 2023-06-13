@@ -14,9 +14,9 @@ export const AcercaDeMi = () => {
     <div id="acerca-de-mi" className="bg-white py-12 lg:py-24 px-6 lg:px-16">
       <div
         data-aos="fade-right"
-        className="max-w-[1000px] mx-auto grid lg:grid-cols-2 grid-cols-1 gap-8"
+        className="max-w-[1000px] mx-auto grid lg:grid-cols-2 grid-cols-1 gap-x-16 gap-y-8"
       >
-        <div>
+        <div className="relative">
           <Image
             src="/images/pc-setup.jpg"
             alt="imagen"
@@ -24,6 +24,16 @@ export const AcercaDeMi = () => {
             height={700}
             className="rounded-xl h-[100%] w-[100%] object-cover object-center"
           />
+
+          <div className="absolute bottom-[-20px] right-[-20px] bg-white p-1 rounded-full shadow">
+            <Image
+              src="/images/acerca-de-mi-pin.svg"
+              alt="pin"
+              width={125}
+              height={125}
+              className="rotate-animation"
+            />
+          </div>
         </div>
         <div className="flex flex-col gap-2">
           <h1 className="text-emerald-600 font-extrabold text-lg uppercase">

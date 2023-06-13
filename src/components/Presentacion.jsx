@@ -7,7 +7,7 @@ export const Presentacion = () => {
   return (
     <div
       id="inicio"
-      className="bg-gray-100 px-6 lg:px-16 py-16 mt-1 min-h-[calc(100vh-90px)] flex items-center justify-center"
+      className="bg-gray-100 px-6 lg:px-16 py-16  min-h-[calc(100vh-80px)] flex items-center justify-center"
     >
       <div>
         <div
@@ -57,7 +57,7 @@ export const Presentacion = () => {
               height={325}
               src="/images/yo.jpg"
               alt="imagen"
-              className="h-[325px] w-[325px] ml-auto object-[0 -30px 0] rounded-full object-cover"
+              className="h-[325px] w-[325px] ml-auto object-[0 -30px 0] rounded-full border-4 border-white object-cover image-animation"
             />
           </div>
         </div>
