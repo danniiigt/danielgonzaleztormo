@@ -7,7 +7,6 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { i18n, t } = useTranslation();
   const [languageSelected, setLanguageSelected] = useState(i18n.language);
-  const [loading, setLoading] = useState(true);
 
   const genericHamburgerLine = `h-1 w-6 my-1 rounded-full bg-black transition ease transform duration-300`;
 
@@ -26,7 +25,6 @@ export const Navbar = () => {
   };
 
   useEffect(() => {
-    setLoading(false);
     setLanguageSelected(i18n.language);
   }, [i18n.language]);
 
@@ -36,78 +34,62 @@ export const Navbar = () => {
         <div>
           <h1 className="text-xl font-extrabold">DanielGT</h1>
         </div>
-        {loading ? (
-          <div
-            role="status"
-            className="space-y-2.5 animate-pulse max-w-lg mr-2 hidden md:block"
-          >
-            <div className="flex items-center w-full gap-4">
-              <div className="h-4 bg-gray-200 rounded-md w-32"></div>
-              <div className="h-4 bg-gray-300 rounded-md w-32"></div>
-              <div className="h-4 bg-gray-300 rounded-md w-32"></div>
-              <div className="h-4 bg-gray-300 rounded-md w-32"></div>
-              <div className="h-4 bg-gray-300 rounded-md w-32"></div>
-              <div className="h-4 bg-gray-300 rounded-md w-32"></div>
-              <div className="h-5 bg-gray-300 rounded-md w-48 ml-10"></div>
-            </div>
-          </div>
-        ) : (
-          <div>
-            <ul className="md:flex items-center hidden gap-8 ">
-              <li>
-                <button
-                  onClick={scrollToTop}
-                  className="hover:text-emerald-700 transition-all duration-100"
-                >
-                  {t("Inicio")}
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("acerca-de-mi")}
-                  className="hover:text-emerald-700 transition-all duration-100"
-                >
-                  {t("Acerca de mí")}
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("portfolio")}
-                  className="hover:text-emerald-700 transition-all duration-100"
-                >
-                  Portfolio
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("estudios")}
-                  className="hover:text-emerald-700 transition-all duration-100"
-                >
-                  {t("Estudios")}
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("contacto")}
-                  className="hover:text-emerald-700 transition-all duration-100"
-                >
-                  {t("Contacto")}
-                </button>
-              </li>
-              <select
-                className="border rounded shadow-sm py-1 px-2 outline-none focus:ring-neutral-500 focus:border-neutral-500 text-neutral-500 text-sm font-light"
-                data-width="fit"
-                value={languageSelected}
-                onChange={(e) => {
-                  changeLanguage(e.target.value);
-                }}
+
+        <div>
+          <ul className="md:flex items-center hidden gap-8 ">
+            <li>
+              <button
+                onClick={scrollToTop}
+                className="hover:text-emerald-700 transition-all duration-100"
               >
-                <option value="es">Español</option>
-                <option value="en">English</option>
-              </select>
-            </ul>
-          </div>
-        )}
+                {t("Inicio")}
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => scrollToSection("acerca-de-mi")}
+                className="hover:text-emerald-700 transition-all duration-100"
+              >
+                {t("Acerca de mí")}
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => scrollToSection("portfolio")}
+                className="hover:text-emerald-700 transition-all duration-100"
+              >
+                Portfolio
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => scrollToSection("estudios")}
+                className="hover:text-emerald-700 transition-all duration-100"
+              >
+                {t("Estudios")}
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => scrollToSection("contacto")}
+                className="hover:text-emerald-700 transition-all duration-100"
+              >
+                {t("Contacto")}
+              </button>
+            </li>
+            <select
+              className="border rounded shadow-sm py-1 px-2 outline-none focus:ring-neutral-500 focus:border-neutral-500 text-neutral-500 text-sm font-light"
+              data-width="fit"
+              value={languageSelected}
+              onChange={(e) => {
+                changeLanguage(e.target.value);
+              }}
+            >
+              <option value="es">Español</option>
+              <option value="en">English</option>
+            </select>
+          </ul>
+        </div>
         <ul className="md:hidden block">
           <div>
             <div className="relative group">
