@@ -1,20 +1,25 @@
+"use client";
+
 import { PortfolioItem } from "./PortfolioItem";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { TechChip } from "./TechChip";
+import { useTranslation } from "react-i18next";
 
 export const Portfolio = () => {
+  const { t } = useTranslation();
+
   return (
     <div id="portfolio" className="bg-gray-100 py-12 lg:py-24 px-6 lg:px-16">
       <div className="max-w-[1000px] mx-auto">
         <div>
           <h1 className="text-emerald-600 font-extrabold text-lg uppercase">
-            Portfolio
+            {t("Portfolio")}
           </h1>
           <h1 className="text-2xl font-extrabold">
-            Estos son algunos de mis proyectos personales 🧩
+            {t("Estos son algunos de mis proyectos personales 🧩")}
           </h1>
         </div>
 
@@ -25,19 +30,18 @@ export const Portfolio = () => {
           >
             <div className="flex flex-col gap-4 lg:px-4">
               <h1 className="text-xl font-extrabold underline decoration-emerald-700">
-                Padel App
+                {t("Padel App")}
               </h1>
               <p>
-                El proyecto consiste en una aplicación completa de reserva de
-                pistas de pádel. Un tipo de usuarios crean pistas, con sus
-                horarios y precios determinados y otros usuarios pueden reservar
-                estas pistas.
+                {t(
+                  "El proyecto consiste en una aplicación completa de reserva de pistas de pádel. Un tipo de usuarios crean pistas, con sus horarios y precios determinados y otros usuarios pueden reservar estas pistas."
+                )}
               </p>
 
               <p>
-                El objetivo principal es eliminar a la persona intermediaria que
-                se encarga de atender a los clientes, reservar las pistas... etc
-                y automatizar el proceso.
+                {t(
+                  "El objetivo principal es eliminar a la persona intermediaria que se encarga de atender a los clientes, reservar las pistas... etc y automatizar el proceso."
+                )}
               </p>
 
               <div className="flex flex-wrap gap-2">
@@ -56,7 +60,7 @@ export const Portfolio = () => {
                   target="_blank"
                   className="bg-emerald-900 text-white px-4 py-2 rounded-lg flex items-center gap-4 text-sm transition-all duration-300 hover:bg-emerald-700"
                 >
-                  Código
+                  {t("Código")}
                   <FontAwesomeIcon icon={faGithub} className="h-4 w-4" />
                 </Link>
                 <Link
@@ -64,7 +68,7 @@ export const Portfolio = () => {
                   target="_blank"
                   className="bg-emerald-900 text-white px-4 py-2 rounded-lg flex items-center gap-4 text-sm transition-all duration-300 hover:bg-emerald-700"
                 >
-                  Demo
+                  {t("Demo")}
                   <FontAwesomeIcon icon={faEye} className="h-4 w-4" />
                 </Link>
               </div>
@@ -77,16 +81,18 @@ export const Portfolio = () => {
           >
             <div className="flex flex-col gap-4 lg:px-4">
               <h1 className="text-xl font-extrabold underline decoration-emerald-700">
-                Coches de ocasión
+                {t("Coches de ocasión")}
               </h1>
               <p>
-                El proyecto consiste en una réplica de coches.net y flexicar
-                donde ver coches de ocasión y poder contactar con el vendedor.
+                {t(
+                  "El proyecto consiste en una réplica de coches.net y flexicar donde ver coches de ocasión y poder contactar con el vendedor."
+                )}
               </p>
 
               <p>
-                Los coches son importados de coches.net y flexicar mediante web
-                scrapping
+                {t(
+                  "Los coches son importados de coches.net y flexicar mediante web scrapping"
+                )}
               </p>
 
               <div className="flex flex-wrap gap-2">
@@ -106,7 +112,7 @@ export const Portfolio = () => {
                   target="_blank"
                   className="bg-emerald-900 text-white px-4 py-2 rounded-lg flex items-center gap-4 text-sm transition-all duration-300 hover:bg-emerald-700"
                 >
-                  Código
+                  {t("Código")}
                   <FontAwesomeIcon icon={faGithub} className="h-4 w-4" />
                 </Link>
                 <Link
@@ -114,7 +120,7 @@ export const Portfolio = () => {
                   target="_blank"
                   className="bg-emerald-900 text-white px-4 py-2 rounded-lg flex items-center gap-4 text-sm transition-all duration-300 hover:bg-emerald-700"
                 >
-                  Demo
+                  {t("Demo")}
                   <FontAwesomeIcon icon={faEye} className="h-4 w-4" />
                 </Link>
               </div>

@@ -4,8 +4,11 @@ import Link from "next/link";
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
 
 export const Contacto = () => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     Aos.init({ duration: 1000, once: true });
   }, []);
@@ -15,10 +18,10 @@ export const Contacto = () => {
       <div data-aos={"fade-left"} className="max-w-[1000px] mx-auto">
         <div>
           <h1 className="text-emerald-600 font-extrabold text-lg uppercase">
-            Contacto
+            {t("Contacto")}
           </h1>
           <h1 className="text-2xl font-extrabold">
-            ¿Quieres contactarme? ¡Escríbeme!
+            {t("¿Quieres contactarme? ¡Escríbeme!")}
           </h1>
         </div>
 
@@ -41,8 +44,8 @@ export const Contacto = () => {
               </svg>
             </div>
             <div>
-              <h1 className="font-extrabold">Ubicación</h1>
-              <h1>Murcia, España</h1>
+              <h1 className="font-extrabold">{t("Ubicación")}</h1>
+              <h1>{t("Murcia, España")}</h1>
             </div>
           </div>
           <div className="flex gap-4 items-center">
@@ -62,9 +65,9 @@ export const Contacto = () => {
               </svg>
             </div>
             <div>
-              <h1 className="font-extrabold">Email</h1>
+              <h1 className="font-extrabold">{t("Email")}</h1>
               <Link href="mailto:danielgonzaleztormo@gmail.com">
-                danielgonzaleztormo@gmail.com
+                {t("danielgonzaleztormo@gmail.com")}
               </Link>
             </div>
           </div>
@@ -86,8 +89,8 @@ export const Contacto = () => {
               </svg>
             </div>
             <div>
-              <h1 className="font-extrabold">Teléfono</h1>
-              <Link href="tel:+34601361279">601361279</Link>
+              <h1 className="font-extrabold">{t("Teléfono")}</h1>
+              <Link href="tel:+34601361279">{t("+34 601361279")}</Link>
             </div>
           </div>
         </div>

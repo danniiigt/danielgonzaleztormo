@@ -1,9 +1,14 @@
+"use client";
+
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 export const Presentacion = () => {
+  const { t } = useTranslation();
+
   return (
     <div
       id="inicio"
@@ -17,7 +22,7 @@ export const Presentacion = () => {
           <div className="lg:w-1/2 mt-16 w-full flex flex-col gap-4 order-2 lg:order-1">
             <div className="relative">
               <h1 className="text-6xl text-center lg:text-left leading-[1.2] font-extrabold text-gray-700">
-                Front-End React Developer
+                {t("Front-End React Developer")}
               </h1>
               <Image
                 src="/images/saludo-mano.png"
@@ -29,8 +34,9 @@ export const Presentacion = () => {
             </div>
             <div>
               <p className="text-center lg:text-left">
-                ¡Hola! Soy Daniel, un apasionado desarrollador web especializado
-                en React. Actualmente viviendo en Murcia, España 📍
+                {t(
+                  "¡Hola! Soy Daniel, un apasionado desarrollador web especializado en React. Actualmente viviendo en Murcia, España 📍"
+                )}
               </p>
             </div>
             <div className="flex justify-center lg:justify-normal gap-4 mt-4">
@@ -57,7 +63,7 @@ export const Presentacion = () => {
               height={325}
               src="/images/yo.jpg"
               alt="imagen"
-              className="h-[325px] w-[325px] ml-auto object-[0 -30px 0] rounded-full border-4 border-white object-cover image-animation"
+              className="h-[325px] w-[325px] ml-auto object-[0 -30px 0] rounded-full border-2 border-gray-700 object-cover image-animation"
             />
           </div>
         </div>
@@ -65,7 +71,7 @@ export const Presentacion = () => {
           data-aos="fade-down"
           className="flex justify-center lg:justify-normal gap-12 mt-16 items-center"
         >
-          <h1 className="hidden lg:block">Stack Tecnológico</h1>
+          <h1 className="hidden lg:block">{t("Stack Tecnológico")}</h1>
           <div className="flex gap-4 flex-wrap justify-center lg:justify-normal">
             <div className="bg-white shadow rounded-full p-4">
               <Image src="/icons/html.svg" alt="html" width={25} height={25} />
@@ -104,7 +110,7 @@ export const Presentacion = () => {
               />
             </div>
             <div className="bg-white shadow rounded-full p-4 flex items-center justify-center">
-              <h1 className="text-gray-500 text-sm">y más...</h1>
+              <h1 className="text-gray-500 text-sm">{t("y más...")}</h1>
             </div>
           </div>
         </div>
