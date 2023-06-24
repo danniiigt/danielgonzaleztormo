@@ -30,7 +30,7 @@ export const Navbar = () => {
 
   return (
     <div className="w-full px-6 lg:px-16 sticky top-0 bg-white z-50 shadow">
-      <div className="max-w-[1000px] h-[80px] bg-white mx-auto flex justify-between items-center">
+      <div className="max-w-[1100px] h-[80px] bg-white mx-auto flex justify-between items-center">
         <div>
           <h1 className="text-xl font-extrabold">DanielGT</h1>
         </div>

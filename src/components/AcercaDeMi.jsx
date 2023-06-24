@@ -1,7 +1,6 @@
 "use client";
 
 import Aos from "aos";
-import "aos/dist/aos.css";
 import Image from "next/image";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
@@ -17,7 +16,7 @@ export const AcercaDeMi = () => {
     <div id="acerca-de-mi" className="bg-white py-12 lg:py-24 px-6 lg:px-16">
       <div
         data-aos="fade-right"
-        className="max-w-[1000px] mx-auto grid lg:grid-cols-2 grid-cols-1 gap-x-16 gap-y-8"
+        className="max-w-[1100px] mx-auto grid lg:grid-cols-2 grid-cols-1 gap-x-16 gap-y-8"
       >
         <div className="relative">
           <Image

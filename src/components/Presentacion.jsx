@@ -12,12 +12,12 @@ export const Presentacion = () => {
   return (
     <div
       id="inicio"
-      className="bg-gray-100 px-6 lg:px-16 py-16  min-h-[calc(100vh-80px)] flex items-center justify-center"
+      className="bg-gray-50 px-6 lg:px-16 py-16  min-h-[calc(100vh-80px)] flex items-center justify-center"
     >
       <div>
         <div
           data-aos="fade-down"
-          className="max-w-[1000px] mx-auto flex justify-between flex-col lg:flex-row items-center"
+          className="max-w-[1100px] mx-auto flex justify-between flex-col lg:flex-row items-center"
         >
           <div className="lg:w-1/2 mt-16 w-full flex flex-col gap-4 order-2 lg:order-1">
             <div className="relative">

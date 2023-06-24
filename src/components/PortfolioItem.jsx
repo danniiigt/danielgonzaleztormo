@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
 import Aos from "aos";
-import "aos/dist/aos.css";
 
 export const PortfolioItem = ({
   imageUrl,
@@ -20,7 +19,7 @@ export const PortfolioItem = ({
     return (
       <div
         data-aos={"fade-right"}
-        className="bg-white rounded-lg shadow-md p-8 flex lg:flex-row flex-col gap-4"
+        className="bg-white rounded-lg shadow p-8 flex lg:flex-row flex-col gap-4 h-fit"
       >
         <div className="lg:w-[40%] w-full lg:order-1 order-2">{children}</div>
         <div className="lg:w-[60%] w-full lg:order-2 order-1">
@@ -44,7 +43,7 @@ export const PortfolioItem = ({
   return (
     <div
       data-aos={"fade-left"}
-      className="bg-white rounded-lg shadow-md p-8 flex lg:flex-row flex-col gap-4"
+      className="bg-white rounded-lg shadow p-8 flex lg:flex-row flex-col gap-4"
     >
       <div className="lg:w-[60%] w-full">
         <Link

@@ -3,6 +3,7 @@ import "./globals.css";
 import "../styles/animations.css";
 import { Poppins } from "next/font/google";
 import { LanguageProvider } from "@/providers/LanguageProvider";
+import "aos/dist/aos.css";
 
 const poppins = Poppins({
   weight: "400",

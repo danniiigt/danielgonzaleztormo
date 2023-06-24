@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useEffect } from "react";
 import Aos from "aos";
-import "aos/dist/aos.css";
 import { useTranslation } from "react-i18next";
 
 export const Contacto = () => {
@@ -15,7 +14,7 @@ export const Contacto = () => {
 
   return (
     <div id="contacto" className="bg-gray-50 py-12 lg:py-24 px-6 lg:px-16">
-      <div data-aos={"fade-left"} className="max-w-[1000px] mx-auto">
+      <div data-aos={"fade-left"} className="max-w-[1100px] mx-auto">
         <div>
           <h1 className="text-emerald-600 font-extrabold text-lg uppercase">
             {t("Contacto")}
